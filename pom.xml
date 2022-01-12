@@ -35,6 +35,18 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.1.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-chrome-driver</artifactId>
+            <version>4.1.1</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -53,45 +65,6 @@
             <plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
-                <version>4.11.2</version>
-                <executions>
-                    <execution>
-                        <id>execution</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                        <configuration>
-                            <projectName>cucumber-jvm-example</projectName>
-                            <!-- optional, per documentation set this to "true" to bypass generation
-                                of Cucumber Reports entirely, defaults to false if not specified -->
-                            <skip>false</skip>
-                            <!-- output directory for the generated report -->
-                            <outputDirectory>${project.build.directory}</outputDirectory>
-                            <!-- optional, defaults to outputDirectory if not specified -->
-                            <inputDirectory>${project.build.directory}</inputDirectory>
-                            <jsonFiles>
-                                <!-- supports wildcard or name pattern -->
-                                <param>**/*.json</param>
-                            </jsonFiles>
-                            <!-- optional, defaults to outputDirectory if not specified -->
-                            <classificationDirectory>${project.build.directory}</classificationDirectory>
-                            <classificationFiles>
-                                <!-- supports wildcard or name pattern -->
-                                <param>sample.properties</param>
-                                <param>other.properties</param>
-                            </classificationFiles>
-                            <parallelTesting>false</parallelTesting>
-                            <!-- optional, set true to fail build on test failures -->
-                            <checkBuildResult>false</checkBuildResult>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <plugin>
-                <groupId>net.masterthought</groupId>
-                <artifactId>maven-cucumber-reporting</artifactId>
                 <version>5.3.0</version>
                 <executions>
                     <execution>
@@ -101,7 +74,7 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <projectName>Sample-Cucumber-TestNG</projectName>
+                            <projectName>Vue JS - Todo App - Automation</projectName>
                             <skip>false</skip>
                             <outputDirectory>reports/html-reports</outputDirectory>
                             <inputDirectory>target/cucumber-reports</inputDirectory>
