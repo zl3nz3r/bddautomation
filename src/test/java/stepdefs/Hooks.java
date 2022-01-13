@@ -8,14 +8,13 @@ import pages.InitPages;
 
 public class Hooks {
 
-    String path = "C:\\Users\\Praveen\\IdeaProjects\\BDDAutomationFramework\\bddautomation\\utils\\chromedriver.exe";
+    String path = "C:\\Driver\\chromedriver.exe";
     public static WebDriver Driver;
 
 
 
     @Before
     public void beforScenrio( ){
-
         System.setProperty("webdriver.chrome.driver",path);
         Driver = new ChromeDriver();
         Driver.get("http://todomvc.com/examples/vue/");
