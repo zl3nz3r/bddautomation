@@ -18,8 +18,7 @@ public class Hooks {
 
         System.setProperty("webdriver.chrome.driver",path);
         Driver = new ChromeDriver();
-
-        Driver.get("http://todomvc.com/examples/vue/ ");
+        Driver.get("http://todomvc.com/examples/vue/");
         InitPages.init();
 
 
